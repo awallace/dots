@@ -1,0 +1,12 @@
+--context
+--ignore-dir=coverage
+--ignore-dir=vendor
+--ignore-dir=public/assets
+--pager=less -FRSX
+--smart-case
+--sort-files
+--type-set=coffee=.coffee
+--type-set=erb=.erb
+--type-set=haml=.haml
+--type-set=scss=.scss
+--type-set=txt=.txt

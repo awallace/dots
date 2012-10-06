@@ -1,0 +1,44 @@
+[user]
+  name = Alex Wallace
+  email = alex.wallace@causes.com
+
+[alias]
+  ci = commit
+  co = checkout
+  st = status
+  b = branch
+  d = diff
+  sub = submodule
+  oneline = log --oneline
+  graph = log --oneline --graph
+  last = log -1
+  patch = add --patch
+  amend = commit --amend
+  staged = diff --cached
+  both = diff HEAD
+  sha1 = !sh -c 'git rev-parse ${1-`echo HEAD`}' -
+
+[apply]
+  whitespace = fix
+
+[diff]
+  color = auto
+  rename = copy
+
+[status]
+  color = auto
+
+[log]
+  decorate = short
+
+[color]
+  ui = auto
+
+[core]
+  excludesfile = ~/.gitignore
+
+[help]
+  autocorrect = 10
+
+[rerere]
+	enable = true
