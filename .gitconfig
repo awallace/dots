@@ -17,6 +17,7 @@
   staged = diff --cached
   both = diff HEAD
   sha1 = !sh -c 'git rev-parse ${1-`echo HEAD`}' -
+  n10 = log --oneline -n 10
 
 [apply]
   whitespace = fix

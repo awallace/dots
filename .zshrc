@@ -37,10 +37,16 @@ bindkey "\e[B" history-beginning-search-forward-end
 alias l='ls -l'
 alias ll='ls -lA'
 alias zshrc='vim ~/.zshrc'
-alias gobowling='ssh -A alex@bowler'
+alias gobowling='ssh-add && ssh -A alex@bowler'
+alias active='vim ~/notes/active.mdown'
+alias passive='vim ~/notes/passive.mdown'
+alias random='vim ~/notes/random.mdown'
+alias todo='vim ~/notes/todo.mdown'
+alias work='vim ~/notes/work.mdown'
 
 # Add local paths over /usr/bin
 PATH=/usr/local/bin:$PATH
+PATH=~/local/bin:$PATH
 
 # disable C-s and C-q
 stty stop undef

@@ -7,8 +7,7 @@ filetype indent plugin on
 
 set autoindent
 set backspace=indent,eol,start
-set backupdir=~.vim/tmp/backup,.
-set directory=~/.vim/tmp/swap,.
+set backupdir=/tmp
 set colorcolumn=80
 set encoding=utf-8
 set expandtab
@@ -63,6 +62,10 @@ map <leader>5 :set foldlevel=5<CR>
 " Don't start out with anything folded by default
 set foldlevel=99
 
+" Newlines without insert mode
+map <Leader>e O<Esc>
+map <Leader>d o<esc>
+
 " Quick and dirty save/close
 map <C-s> :w<CR>
 map <leader>s :w<CR>
@@ -104,6 +107,9 @@ map <leader>" cs'"<CR>
 :nnoremap * *zz
 :nnoremap n nzz
 :nnoremap N Nzz
+
+" Theta
+imap <A-o> 𝛩 
 
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
