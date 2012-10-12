@@ -2,6 +2,11 @@
 autoload -U compinit
 compinit
 
+# Don't auto-complete these
+alias mv='nocorrect mv'
+alias sudo='nocorrect sudo'
+alias which='nocorrect which'
+
 # Colorful
 autoload -U colors
 colors
@@ -28,6 +33,8 @@ export HISTSIZE=100000
 export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
 autoload history-search-end
+
+# Quick history searching
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "\e[A" history-beginning-search-backward-end
@@ -36,31 +43,39 @@ bindkey "\e[B" history-beginning-search-forward-end
 # Aliases
 alias l='ls -l'
 alias ll='ls -lA'
+alias rc='rails console'
 alias zshrc='vim ~/.zshrc'
 alias gobowling='ssh -A alex@bowler'
+alias cdc='cd ~/causes'
+alias stark='cd ~/stark'
+alias refresh-master='git fetch && git reset --hard origin/master && git sub update --init'
 
-# Add local paths over /usr/bin
+# Add paths in order: ~/local, /usr/local
 PATH=/usr/local/bin:$PATH
+PATH=$HOME/local/bin:$PATH
 
 # disable C-s and C-q
 stty stop undef
 stty start undef
 
+# Faster, Ruby, kill, kill!
+export RUBY_HEAP_MIN_SLOTS=1000000
+export RUBY_HEAP_SLOTS_INCREMENT=1000000
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+export RUBY_GC_MALLOC_LIMIT=100000000
+export RUBY_HEAP_FREE_MIN=500000
+
 # Fix lost SSH agents
-ssh-reagent() {
+ssh-reagent () {
   for agent in /tmp/ssh-*/agent.*; do
-    echo Trying $agent
     export SSH_AUTH_SOCK=$agent
-    if $HOME/.bash/timeout3 -t 1 ssh-add -l &> /dev/null; then
+    if ssh-add -l 2>&1 > /dev/null; then
       echo Found working SSH Agent:
       ssh-add -l
       return
-    else
-      echo 'Looks dead; removing'
-      rm -r $agent
     fi
   done
-  echo Cannot find ssh agent - maybe you should reconnect and forward it?
+  echo "Cannot find ssh agent - maybe you should reconnect and forward it?"
 }
 
 PS1="%{$fg[yellow]%}%~%{$reset_color%} $ "
