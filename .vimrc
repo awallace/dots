@@ -141,4 +141,3 @@ colorscheme twilight256
 :hi htmlLink cterm=none
 :hi markdownH1 ctermfg=229
 :hi markdownItalic ctermbg=none
-

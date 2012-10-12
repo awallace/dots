@@ -1,6 +1,7 @@
 [user]
   name = Alex Wallace
   email = alex.wallace@causes.com
+	gerrit = alex
 
 [alias]
   ci = commit
@@ -36,7 +37,9 @@
   ui = auto
 
 [core]
+  editor = vim
   excludesfile = ~/.gitignore
+  warnambiguousrefs = false
 
 [help]
   autocorrect = 10
