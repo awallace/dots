@@ -6,6 +6,9 @@ compinit
 alias mv='nocorrect mv'
 alias sudo='nocorrect sudo'
 alias which='nocorrect which'
+alias knife='nocorrect knife'
+alias bundle='nocorrect bundle'
+alias rails='bundle exec rails'
 
 # Colorful
 autoload -U colors

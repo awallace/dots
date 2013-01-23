@@ -7,8 +7,8 @@ filetype indent plugin on
 
 set autoindent
 set backspace=indent,eol,start
-set backupdir=/tmp
 set colorcolumn=80
+set dir=~/.vim/tmp
 set encoding=utf-8
 set expandtab
 set foldmethod=indent
@@ -34,7 +34,7 @@ set smarttab
 set tabstop=2
 set textwidth=80
 set virtualedit=block
-set wildignore+=*.o,.git,tmp
+set wildignore+=*.o,.git,app/assets/images,tmp
 set wildmenu
 set wildmode=longest:full,full
 set whichwrap=b,h,l,s,<,>,[,],~
@@ -68,7 +68,6 @@ map <Leader>d o<esc>
 
 " Quick and dirty save/close
 map <C-s> :w<CR>
-map <leader>s :w<CR>
 map <leader>w :q<CR>
 
 " Command-T setup
@@ -110,6 +109,9 @@ map <leader>" cs'"<CR>
 
 " Theta
 imap <A-o> 𝛩 
+
+" Always use /v for searching
+vnoremap / /\v
 
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()

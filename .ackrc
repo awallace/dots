@@ -2,6 +2,8 @@
 --ignore-dir=coverage
 --ignore-dir=vendor
 --ignore-dir=public/assets
+--ignore-dir=spec/fixtures
+--ignore-dir=.rbenv
 --pager=less -FRSX
 --smart-case
 --sort-files
