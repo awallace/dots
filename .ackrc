@@ -9,4 +9,5 @@
 --type-set=erb=.erb
 --type-set=haml=.haml
 --type-set=scss=.scss
+--type-set=mdown=.mdown
 --type-set=txt=.txt

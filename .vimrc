@@ -34,7 +34,7 @@ set smarttab
 set tabstop=2
 set textwidth=80
 set virtualedit=block
-set wildignore+=*.o,.git
+set wildignore+=*.o,.git,tmp
 set wildmenu
 set wildmode=longest:full,full
 set whichwrap=b,h,l,s,<,>,[,],~
