@@ -29,7 +29,6 @@ set shiftwidth=2
 set shortmess+=A
 set showcmd
 set smartcase
-set smartindent
 set smarttab
 set tabstop=2
 set textwidth=80
@@ -42,8 +41,8 @@ set whichwrap=b,h,l,s,<,>,[,],~
 " some limits for git commits
 autocmd FileType gitcommit setlocal textwidth=72 fo+=t
 
-" jj gets back to command mode 
-inoremap jj <Esc>
+" jj gets back to command mode
+map! jj <Esc>
 
 " Tab navigation
 map <C-h> gT<CR>
@@ -84,9 +83,6 @@ let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
 let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
 let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 
-" Draw a horizontal line of 80 =
-map <leader>= 80i=<Esc><CR>
-
 " Move the usual vim pane to C-e, since I give C-w to tmux
 map! <C-e> <C-w>
 
@@ -107,27 +103,11 @@ map <leader>" cs'"<CR>
 :nnoremap n nzz
 :nnoremap N Nzz
 
-" Theta
-imap <A-o> 𝛩 
-
 " Always use /v for searching
 vnoremap / /\v
 
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-
-nnoremap - :set showtabline=2<CR>
-nnoremap _ :set showtabline=0<CR>
-nnoremap <leader>a :Ack<space>
-nnoremap <leader>da :bufdo silent! bdelete<CR>
 nnoremap <leader>n :noh<CR>
 nnoremap <silent> <leader>zz :let _last_search=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_last_search <Bar> :noh<CR>
-nnoremap <leader>da :bufdo silent! bdelete<CR>
 
 colorscheme twilight256
 :hi ColorColumn ctermbg=234
@@ -143,3 +123,11 @@ colorscheme twilight256
 :hi htmlLink cterm=none
 :hi markdownH1 ctermfg=229
 :hi markdownItalic ctermbg=none
+
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+
+" Leave this at the end to avoid being overridden
+highlight ExtraWhitespace ctermbg=red guibg=red
