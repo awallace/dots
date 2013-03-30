@@ -49,15 +49,6 @@ alias ll='ls -lA'
 alias rc='rails console'
 alias zshrc='vim ~/.zshrc'
 alias refresh-master='git fetch && git reset --hard origin/master && git sub update --init'
-alias gobowling='ssh-add && ssh -A alex@bowler'
-alias active='vim ~/notes/active.mdown'
-alias passive='vim ~/notes/passive.mdown'
-alias random='vim ~/notes/random.mdown'
-alias todo='vim ~/notes/todo.mdown'
-alias work='vim ~/notes/work.mdown'
-
-alias cdc='cd ~/causes'
-alias stark='cd ~/stark'
 
 # Add paths in order: ~/local, /usr/local
 PATH=~/local/bin:$PATH
