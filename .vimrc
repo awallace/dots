@@ -109,6 +109,9 @@ vnoremap / /\v
 nnoremap <leader>n :noh<CR>
 nnoremap <silent> <leader>zz :let _last_search=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_last_search <Bar> :noh<CR>
 
+" Let syntastic know about my jsl.conf
+let g:syntastic_javascript_jsl_conf = "-conf ~/.jsl.conf"
+
 colorscheme twilight256
 :hi ColorColumn ctermbg=234
 :hi CursorLine cterm=NONE ctermbg=234
