@@ -1,7 +1,7 @@
 [user]
   name = Alex Wallace
-  email = alex.wallace@causes.com
-	gerrit = alex
+  email = alex@andjs.com
+  gerrit = alex
 
 [alias]
   ci = commit
@@ -45,4 +45,4 @@
   autocorrect = 10
 
 [rerere]
-	enable = true
+  enable = true
