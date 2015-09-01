@@ -117,7 +117,10 @@ colorscheme twilight256
 :hi htmlLink cterm=none
 :hi markdownH1 ctermfg=229
 :hi markdownItalic ctermbg=none
-
+:hi Pmenu ctermfg=250 ctermbg=233
+:hi PmenuSel ctermfg=7 ctermbg=27
+:hi PmenuSbar ctermbg=235
+:hi PmenuThumb ctermbg=237
 :hi VertSplit ctermbg=234 ctermfg=234
 
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
