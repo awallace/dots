@@ -59,13 +59,6 @@ PATH=$HOME/local/bin:$PATH
 stty stop undef
 stty start undef
 
-# Faster, Ruby, kill, kill!
-export RUBY_HEAP_MIN_SLOTS=1000000
-export RUBY_HEAP_SLOTS_INCREMENT=1000000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-export RUBY_GC_MALLOC_LIMIT=100000000
-export RUBY_HEAP_FREE_MIN=500000
-
 # Fix lost SSH agents
 ssh-reagent () {
   for agent in /tmp/ssh-*/agent.*; do
@@ -82,3 +75,5 @@ ssh-reagent () {
 PS1="%{$fg[yellow]%}%~%{$reset_color%} $ "
 
 clear;
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
