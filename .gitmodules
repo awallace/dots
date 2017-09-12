@@ -28,3 +28,6 @@
 [submodule ".vim/bundle/terminus"]
 	path = .vim/bundle/terminus
 	url = https://github.com/wincent/terminus
+[submodule ".vim/bundle/vim-javascript"]
+	path = .vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
