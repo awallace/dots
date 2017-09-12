@@ -1,8 +1,8 @@
 alex's dot files
 
 to install:
- * git clone into `~/.dots`
- * from there, `git submodule update --init`
- * symlink them to home dir: `ln -s ~/.dots/* ~/`
+ * git clone into ~/.dots
+ * from there, git submodule update --init
+ * symlink them to home dir: ln -s ~/.dots/* ~/
 
 make sure to compile vim and command-t against a single modern ruby install.
