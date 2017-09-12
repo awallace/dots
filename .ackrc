@@ -1,5 +1,8 @@
 --context
 --ignore-dir=coverage
+--ignore-dir=desktop/dist
+--ignore-dir=api/dist
+--ignore-dir=web/dist/
 --ignore-dir=vendor
 --ignore-dir=public/assets
 --ignore-dir=spec/fixtures
