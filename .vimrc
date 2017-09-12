@@ -135,7 +135,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = '/Users/alex/.nvm/versions/node/v7.9.0/bin/eslint'
-let g:syntastic_javascript_jsl_conf = "-conf ~/.jsl.conf"
 
 let g:jsx_ext_required = 0
 
