@@ -34,3 +34,6 @@
 [submodule ".vim/bundle/vim-pug"]
 	path = .vim/bundle/vim-pug
 	url = https://github.com/digitaltoad/vim-pug
+[submodule ".vim/bundle/vim-bracketed-paste"]
+	path = .vim/bundle/vim-bracketed-paste
+	url = https://github.com/ConradIrwin/vim-bracketed-paste
