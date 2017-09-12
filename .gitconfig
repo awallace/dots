@@ -1,7 +1,6 @@
 [user]
   name = Alex Wallace
   email = alex@readmu.com
-  gerrit = alex
 
 [alias]
   ci = commit
@@ -11,12 +10,10 @@
   d = diff
   sub = submodule
   oneline = log --oneline
-  graph = log --oneline --graph
   last = log -1
   patch = add --patch
   amend = commit --amend
   staged = diff --cached
-  both = diff HEAD
   sha1 = !sh -c 'git rev-parse ${1-`echo HEAD`}' -
   n10 = log --oneline -n 10
 
