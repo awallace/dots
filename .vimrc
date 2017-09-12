@@ -30,7 +30,7 @@ set smarttab
 set tabstop=2
 set textwidth=80
 set virtualedit=block
-set wildignore+=*.o,.git,app/assets/images,tmp,actionscript/bin
+set wildignore+=*.o,.git,app/assets/images,tmp,actionscript/bin,node_modules,dist,web/node_modules,api/node_modules,chem/node_modules,node_modules,api/dist,web/dist,chem/dist,desktop/dist
 set wildmenu
 set wildmode=longest:full,full
 set whichwrap=b,h,l,s,<,>,[,],~
@@ -74,13 +74,13 @@ let g:CommandTAcceptSelectionTabMap = '<C-t>'
 let g:CommandTAcceptSelectionSplitMap = '<C-s>'
 let g:CommandTAcceptSelectionVSplitMap = '<C-v>'
 let g:CommandTMaxFiles=500000
-let g:CommandTMaxHeight=12
+let g:CommandTMaxHeight=20
 let g:CommandTScanDotDirectories = 1
-let g:CommandTInputDebounce = 200
-let g:CommandTFileScanner = 'watchman'
+let g:CommandTFileScanner = 'ruby'
 let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
 let g:CommandTSelectNextMap = ['<C-j>']
 let g:CommandTSelectPrevMap = ['<C-k>']
+let g:CommandTWildIgnore = 'node_modules,*dist*,*flow-typed*'
 
 " Shortcuts for common whitespace aligning
 map <leader>= :Tabularize/=<CR>
@@ -100,23 +100,20 @@ vnoremap / /\v
 nnoremap <leader>n :noh<CR>
 nnoremap <silent> <leader>zz :let _last_search=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_last_search <Bar> :noh<CR>
 
-" Let syntastic know about my jsl.conf
-let g:syntastic_javascript_jsl_conf = "-conf ~/.jsl.conf"
-
-colorscheme twilight256
+colorscheme base16-twilight
 :hi ColorColumn ctermbg=234
-:hi CursorLine cterm=NONE ctermbg=234
-:hi Folded ctermbg=234
+:hi CursorLine cterm=none ctermbg=234
+:hi Folded cterm=none ctermbg=234
 :hi IncSearch cterm=none ctermbg=none ctermfg=yellow
-:hi LineNr cterm=none ctermfg=229
-:hi Search cterm=none ctermbg=none ctermfg=yellow
-:hi TabLine cterm=underline ctermbg=none
-:hi TabLineFill cterm=underline ctermbg=none ctermfg=234
-:hi TabLineSel cterm=underline ctermfg=yellow
-:hi Todo ctermbg=none
-:hi htmlLink cterm=none
-:hi markdownH1 ctermfg=229
-:hi markdownItalic ctermbg=none
+:hi LineNr cterm=none ctermbg=234 ctermfg=229
+" :hi Search cterm=none ctermbg=none ctermfg=yellow
+" :hi TabLine cterm=underline ctermbg=none
+" :hi TabLineFill cterm=underline ctermbg=none ctermfg=234
+" :hi TabLineSel cterm=underline ctermfg=yellow
+" :hi Todo ctermbg=none
+" :hi htmlLink cterm=none
+" :hi markdownH1 ctermfg=229
+" :hi markdownItalic ctermbg=none
 :hi Pmenu ctermfg=250 ctermbg=233
 :hi PmenuSel ctermfg=7 ctermbg=27
 :hi PmenuSbar ctermbg=235
@@ -127,6 +124,20 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = '/Users/alex/.nvm/versions/node/v7.9.0/bin/eslint'
+let g:syntastic_javascript_jsl_conf = "-conf ~/.jsl.conf"
+
+let g:jsx_ext_required = 0
 
 " Leave this at the end to avoid being overridden
 highlight ExtraWhitespace ctermbg=red guibg=red
