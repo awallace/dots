@@ -25,3 +25,6 @@
 [submodule ".vim/bundle/loupe"]
 	path = .vim/bundle/loupe
 	url = https://github.com/wincent/loupe
+[submodule ".vim/bundle/terminus"]
+	path = .vim/bundle/terminus
+	url = https://github.com/wincent/terminus
