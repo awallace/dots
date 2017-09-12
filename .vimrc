@@ -100,20 +100,20 @@ vnoremap / /\v
 nnoremap <leader>n :noh<CR>
 nnoremap <silent> <leader>zz :let _last_search=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_last_search <Bar> :noh<CR>
 
-colorscheme base16-twilight
+colorscheme twilight256
 :hi ColorColumn ctermbg=234
-:hi CursorLine cterm=none ctermbg=234
-:hi Folded cterm=none ctermbg=234
+:hi CursorLine cterm=NONE ctermbg=234
+:hi Folded ctermbg=234
 :hi IncSearch cterm=none ctermbg=none ctermfg=yellow
-:hi LineNr cterm=none ctermbg=234 ctermfg=229
-" :hi Search cterm=none ctermbg=none ctermfg=yellow
-" :hi TabLine cterm=underline ctermbg=none
-" :hi TabLineFill cterm=underline ctermbg=none ctermfg=234
-" :hi TabLineSel cterm=underline ctermfg=yellow
-" :hi Todo ctermbg=none
-" :hi htmlLink cterm=none
-" :hi markdownH1 ctermfg=229
-" :hi markdownItalic ctermbg=none
+:hi LineNr cterm=none ctermfg=229
+:hi Search cterm=none ctermbg=none ctermfg=yellow
+:hi TabLine cterm=underline ctermbg=none
+:hi TabLineFill cterm=underline ctermbg=none ctermfg=234
+:hi TabLineSel cterm=underline ctermfg=yellow
+:hi Todo ctermbg=none
+:hi htmlLink cterm=none
+:hi markdownH1 ctermfg=229
+:hi markdownItalic ctermbg=none
 :hi Pmenu ctermfg=250 ctermbg=233
 :hi PmenuSel ctermfg=7 ctermbg=27
 :hi PmenuSbar ctermbg=235
