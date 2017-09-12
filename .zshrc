@@ -7,10 +7,6 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 alias mv='nocorrect mv'
 alias sudo='nocorrect sudo'
 alias which='nocorrect which'
-alias knife='nocorrect knife'
-alias bundle='nocorrect bundle'
-alias grunt='nocorrect grunt'
-alias rails='bundle exec rails'
 
 # Colorful
 autoload -U colors
@@ -50,7 +46,6 @@ alias l='ls -l'
 alias ll='ls -lA'
 alias rc='rails console'
 alias zshrc='vim ~/.zshrc'
-alias refresh-master='git fetch && git reset --hard origin/master && git sub update --init'
 
 # Add paths in order: ~/local, /usr/local
 PATH=~/bin:$PATH
