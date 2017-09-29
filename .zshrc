@@ -46,6 +46,7 @@ alias l='ls -l'
 alias ll='ls -lA'
 alias rc='rails console'
 alias zshrc='vim ~/.zshrc'
+alias clip="nc localhost 8377"
 
 # Add paths in order: ~/local, /usr/local
 PATH=~/bin:$PATH
