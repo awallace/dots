@@ -1,0 +1,58 @@
+{
+    "editor.background": "#000000",
+    "editor.fontSize": 13,
+    "editor.fontFamily": "Inconsolata-dz",
+    "editor.tabSize": 2,
+    "editor.rulers": [80],
+    "vim.statusBarColorControl": true,
+    "vim.leader": "\\",
+    "vim.hlsearch": true,
+    "vim.textwidth": 80,
+    "vim.userSystemClipboard": true,
+    "vim.cursorStylePerMode.insert": "line",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<C-s>"],
+            "commands": [
+                ":w"
+            ]
+        },
+        {
+            "before": ["leader", "w"],
+            "commands": [
+                ":q"
+            ]
+        },
+        {
+            "before": ["leader", "t"],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": ["<C-j>"],
+            "commands": [
+                "workbench.action.quickOpenNavigateNextInViewPicker"
+            ]
+        },
+        {
+            "before": ["<C-j>"],
+            "commands": [
+                "workbench.action.quickOpenNavigatePreviousInViewPicker"
+            ]
+        }
+    ],
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f",
+        "editor.background": "#000000"
+    },
+    "workbench.colorTheme": "Twilight"
+}
