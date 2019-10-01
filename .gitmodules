@@ -43,3 +43,12 @@
 [submodule ".vim/bundle/vim-graphql"]
 	path = .vim/bundle/vim-graphql
 	url = https://github.com/jparise/vim-graphql.git
+[submodule ".vim/bundle/vim-closetag"]
+	path = .vim/bundle/vim-closetag
+	url = https://github.com/alvan/vim-closetag
+[submodule ".vim/bundle/securemodelines"]
+	path = .vim/bundle/securemodelines
+	url = git@github.com:ciaranm/securemodelines.git
+[submodule ".vim/bundle/ale"]
+	path = .vim/bundle/ale
+	url = https://github.com/w0rp/ale.git
