@@ -11,6 +11,9 @@
 --ignore-dir=coverage
 --ignore-dir=dist
 --ignore-dir=vendor
+--ignore-dir=tmp
+--ignore-dir=packs-dev
+--ignore-dir=log
 
 --type-set=erb=.erb
 --type-set=haml=.haml
