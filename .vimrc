@@ -4,7 +4,7 @@ filetype indent plugin on
 
 set autoindent
 set backspace=indent,eol,start
-set colorcolumn=80
+" set colorcolumn=80
 set dir=~/.vim/tmp
 set encoding=utf-8
 set expandtab
@@ -144,3 +144,14 @@ let g:jsx_ext_required = 0
 " Leave this at the end to avoid being overridden
 highlight ExtraWhitespace ctermbg=red guibg=red
 set noeb vb t_vb=
+
+let g:ale_fixers = {
+\  'javascript': ['eslint'],
+\}
+let g:ale_fix_on_save = 1
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+let g:ale_sign_column_always = 1
+highlight ALEErrorSign ctermbg=black ctermfg=red
+highlight ALEWarningSign ctermbg=black ctermfg=yellow
+hi clear SignColumn
