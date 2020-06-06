@@ -30,7 +30,7 @@ set smarttab
 set tabstop=2
 set textwidth=80
 set virtualedit=block
-set wildignore+=*.o,.git,app/assets/images,tmp,actionscript/bin,node_modules,dist,web/node_modules,api/node_modules,chem/node_modules,node_modules,api/dist,web/dist,chem/dist,desktop/dist
+set wildignore+=*.o,.git,app/assets/images,tmp,node_modules,dist,tmp/cache/assets
 set wildmenu
 set wildmode=longest:full,full
 set whichwrap=b,h,l,s,<,>,[,],~
