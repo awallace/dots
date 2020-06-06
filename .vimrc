@@ -145,6 +145,12 @@ let g:jsx_ext_required = 0
 highlight ExtraWhitespace ctermbg=red guibg=red
 set noeb vb t_vb=
 
+if !exists('##TextYankPost')
+  map y <Plug>(highlightedyank)
+endif
+let g:highlightedyank_highlight_duration = 300
+highlight HighlightedyankRegion cterm=reverse gui=reverse
+
 let g:ale_fixers = {
 \  'javascript': ['eslint'],
 \}
