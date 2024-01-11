@@ -7,6 +7,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 alias mv='nocorrect mv'
 alias sudo='nocorrect sudo'
 alias which='nocorrect which'
+alias vim='/usr/local/bin/nvim'
 
 # Colorful
 autoload -U colors
@@ -44,16 +45,13 @@ bindkey "\e[B" history-beginning-search-forward-end
 # Aliases
 alias l='ls -l'
 alias ll='ls -lA'
-alias rc='rails console'
 alias zshrc='vim ~/.zshrc'
-alias clip="nc localhost 8377"
 
 # Add paths in order: ~/local, /usr/local
 PATH=~/bin:$PATH
 PATH=~/local/bin:$PATH
 PATH=/usr/local/bin:$PATH
 PATH=$HOME/local/bin:$PATH
-PATH=$HOME/Library/Python/2.7/bin:$PATH
 
 # disable C-s and C-q
 stty stop undef

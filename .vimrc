@@ -66,8 +66,15 @@ set foldlevel=99
 map <C-s> :w<CR>
 map <leader>w :q<CR>
 
+colorscheme twilight256
+
+let g:airline_theme='solarized'
+let g:airline_theme_bg='dark'
+let g:airline_section_y=''
+let g:airline_section_z=''
+
 " Command-T setup
-map <leader>t :CommandT<CR>
+map <leader>t :CommandTWatchman<CR>
 map <leader>f :CommandTFlush<CR>
 let g:CommandTAcceptSelectionMap = '<CR>'
 let g:CommandTAcceptSelectionTabMap = '<C-t>'
@@ -76,11 +83,9 @@ let g:CommandTAcceptSelectionVSplitMap = '<C-v>'
 let g:CommandTMaxFiles=500000
 let g:CommandTMaxHeight=20
 let g:CommandTScanDotDirectories = 1
-let g:CommandTFileScanner = 'ruby'
 let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
 let g:CommandTSelectNextMap = ['<C-j>']
 let g:CommandTSelectPrevMap = ['<C-k>']
-let g:CommandTWildIgnore = 'node_modules,*dist*,*flow-typed*'
 
 " Shortcuts for common whitespace aligning
 map <leader>= :Tabularize/=<CR>
@@ -100,64 +105,28 @@ vnoremap / /\v
 nnoremap <leader>n :noh<CR>
 nnoremap <silent> <leader>zz :let _last_search=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_last_search <Bar> :noh<CR>
 
-" Clipper
-nnoremap <leader>y :call system('nc localhost 8377', @0)<CR>
-
-colorscheme twilight256
-:hi ColorColumn ctermbg=234
-:hi CursorLine cterm=NONE ctermbg=234
-:hi Folded ctermbg=234
-:hi IncSearch cterm=none ctermbg=none ctermfg=yellow
-:hi LineNr cterm=none ctermfg=229
-:hi Search cterm=none ctermbg=none ctermfg=yellow
-:hi TabLine cterm=underline ctermbg=none
-:hi TabLineFill cterm=underline ctermbg=none ctermfg=234
-:hi TabLineSel cterm=underline ctermfg=yellow
-:hi Todo ctermbg=none
-:hi htmlLink cterm=none
-:hi markdownH1 ctermfg=229
-:hi markdownItalic ctermbg=none
-:hi Pmenu ctermfg=250 ctermbg=233
-:hi PmenuSel ctermfg=7 ctermbg=27
-:hi PmenuSbar ctermbg=235
-:hi PmenuThumb ctermbg=237
-:hi VertSplit ctermbg=234 ctermfg=234
-
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exec = '/Users/alex/.nvm/versions/node/v7.9.0/bin/eslint'
-
-let g:jsx_ext_required = 0
-
 " Leave this at the end to avoid being overridden
 highlight ExtraWhitespace ctermbg=red guibg=red
 set noeb vb t_vb=
 
-if !exists('##TextYankPost')
-  map y <Plug>(highlightedyank)
-endif
-let g:highlightedyank_highlight_duration = 300
-highlight HighlightedyankRegion cterm=reverse gui=reverse
-
-let g:ale_fixers = {
-\  'javascript': ['eslint'],
-\}
-let g:ale_fix_on_save = 1
-let g:ale_sign_error = '✘'
-let g:ale_sign_warning = '⚠'
-let g:ale_sign_column_always = 1
-highlight ALEErrorSign ctermbg=black ctermfg=red
-highlight ALEWarningSign ctermbg=black ctermfg=yellow
-hi clear SignColumn
+" if !exists('##TextYankPost')
+"   map y <Plug>(highlightedyank)
+" endif
+" let g:highlightedyank_highlight_duration = 150
+" highlight HighlightedyankRegion cterm=reverse gui=reverse
+" 
+" let g:ale_fixers = {
+" \  'javascript': ['eslint'],
+" \}
+" let g:ale_fix_on_save = 1
+" let g:ale_sign_error = '✘'
+" let g:ale_sign_warning = '⚠'
+" let g:ale_sign_column_always = 1
+" highlight ALEErrorSign ctermbg=black ctermfg=red
+" highlight ALEWarningSign ctermbg=black ctermfg=yellow
+" hi clear SignColumn
