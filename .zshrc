@@ -83,6 +83,6 @@ export GPG_TTY=$(tty)
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
-eval "$(~/.rbenv/bin/rbenv init - zsh)"
+eval "$(rbenv init - zsh)"
 
 clear;
