@@ -1,4 +1,3 @@
-execute pathogen#infect()
 syntax on
 filetype indent plugin on
 
@@ -73,6 +72,12 @@ let g:airline_theme_bg='dark'
 let g:airline_section_y=''
 let g:airline_section_z=''
 
+:hi CursorLine cterm=NONE ctermbg=234
+:hi LineNr cterm=NONE ctermfg=229
+:hi TabLine cterm=underline ctermbg=none
+:hi TabLineFill cterm=underline ctermbg=234
+:hi TabLineSel cterm=underline ctermbg=yellow
+
 " Command-T setup
 map <leader>t :CommandTWatchman<CR>
 map <leader>f :CommandTFlush<CR>
@@ -104,6 +109,9 @@ vnoremap / /\v
 
 nnoremap <leader>n :noh<CR>
 nnoremap <silent> <leader>zz :let _last_search=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_last_search <Bar> :noh<CR>
+
+map <leader>o :set number relativenumber<CR>
+map <leader>O :set number norelativenumber<CR>
 
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
