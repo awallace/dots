@@ -4,3 +4,6 @@
 [submodule ".vim/pack/plugins/start/vim-numbertoggle"]
 	path = .vim/pack/plugins/start/vim-numbertoggle
 	url = git@github.com:jeffkreeftmeijer/vim-numbertoggle.git
+[submodule ".tmux/plugins/tpm"]
+	path = .tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
