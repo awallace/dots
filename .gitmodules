@@ -1,3 +1,6 @@
 [submodule ".zsh/zsh-git"]
 	path = .zsh/zsh-git
 	url = https://github.com/jcorbin/zsh-git.git
+[submodule ".vim/pack/plugins/start/vim-numbertoggle"]
+	path = .vim/pack/plugins/start/vim-numbertoggle
+	url = git@github.com:jeffkreeftmeijer/vim-numbertoggle.git
